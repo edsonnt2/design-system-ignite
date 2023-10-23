@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "tsup src/index.ts --format esm,cjs --dts",
-    "dev": "build --watch"    
+    "dev": "tsup src/index.ts --format esm,cjs --dts --watch"    
   },
   "keywords": [],
   "author": "",
