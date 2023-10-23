@@ -1,5 +1,5 @@
-import { colors } from "@ignite-ui/tokens";
+import { colors } from '@ignite-ui/tokens'
 
-console.log("color white -> ", colors.white);
+console.log('color white -> ', colors.white)
 
-console.log("OK! This is react package ui");
+console.log('OK! This is react package ui')
