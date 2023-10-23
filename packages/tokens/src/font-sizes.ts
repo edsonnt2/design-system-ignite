@@ -12,4 +12,4 @@ export const fontSizes = {
   '7xl': '4rem', // 64px
   '8xl': '4.5rem', // 72px
   '9xl': '6rem', // 96px
-}
+} as const

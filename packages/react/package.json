@@ -12,7 +12,7 @@
     "build": "tsup src/index.tsx --format esm,cjs --dts --external react",
     "dev": "tsup src/index.tsx --format esm,cjs --dts --external react --watch",
     "lint": "eslint src/**/*.ts* --fix"
-  },  
+  },
   "devDependencies": {
     "@ignite-ui/eslint-config": "*",
     "@ignite-ui/tokens": "*",
@@ -22,5 +22,8 @@
     "react": "^18.2.0",
     "tsup": "^7.2.0",
     "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "@stitches/react": "^1.2.8"
   }
 }
