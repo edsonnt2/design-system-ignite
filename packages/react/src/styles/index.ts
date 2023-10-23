@@ -1,5 +1,5 @@
 import {
-  borderRadius,
+  radii,
   colors,
   fontSizes,
   fontWeights,
@@ -30,7 +30,7 @@ export const {
     fontWeights,
     fonts,
     lineHeights,
-    radii: borderRadius,
+    radii,
     space,
   },
 })
