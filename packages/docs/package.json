@@ -10,6 +10,11 @@
     "dev": "storybook dev -p 6006",
     "build": "storybook build"
   },
+  "dependencies": {
+    "@ignite-ui/eslint-config": "*",
+    "@ignite-ui/tokens": "*",
+    "@ignite-ui/react": "*"
+  },
   "devDependencies": {
     "@storybook/addon-essentials": "^7.5.1",
     "@storybook/addon-interactions": "^7.5.1",
