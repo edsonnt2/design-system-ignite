@@ -7,8 +7,7 @@
   "scripts": {
     "docs:dev": "npm run dev --workspace @ignite-ui/docs",
     "tokens:dev": "npm run dev -w @ignite-ui/tokens",
-    "react:dev": "npm run dev -w @ignite-ui/react",
-    "dev:all": "npm run dev --workspaces --if-present",
-    "build:all": "npm run build --ws --if-present"
+    "react:dev": "npm run dev -w @ignite-ui/react",    
+    "build:all": "npm run build -ws --if-present"
   }
 }
