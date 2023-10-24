@@ -2,10 +2,10 @@
 
 - [x] Box
 - [x] Text
-- [ ] Heading
+- [x] Heading
+- [x] Avatar
 - [ ] Button
 - [ ] TextInput
 - [ ] TextArea
 - [ ] Checkbox
-- [ ] Avatar
 - [ ] MultiStep
