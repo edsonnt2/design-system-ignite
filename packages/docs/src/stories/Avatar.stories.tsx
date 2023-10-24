@@ -7,6 +7,11 @@ export default {
   args: {
     alt: 'User name',
   },
+  argTypes: {
+    src: {
+      type: 'string',
+    },
+  },
 } as Meta<AvatarProps>
 
 export const Primary: StoryObj<AvatarProps> = {
