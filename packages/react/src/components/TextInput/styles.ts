@@ -20,7 +20,7 @@ export const TextInputContainer = styled('div', {
   },
 })
 
-export const Label = styled('label', {
+export const LabelContainer = styled('label', {
   display: 'flex',
   flexDirection: 'column',
   gap: '$2',

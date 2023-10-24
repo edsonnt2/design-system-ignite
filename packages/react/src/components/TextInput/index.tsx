@@ -1,20 +1,26 @@
 import { ComponentProps } from 'react'
-import { Input, Label, Prefix, TextInputContainer } from './styles'
+import { Input, LabelContainer, Prefix, TextInputContainer } from './styles'
 
 export interface TextInputProps extends ComponentProps<typeof Input> {
-  label?: ComponentProps<typeof Label>
+  label?: ComponentProps<typeof LabelContainer>
   prefix?: string
 }
 
-export function TextInput({ label = {}, prefix, ...props }: TextInputProps) {
+export function TextInput({ label, prefix, ...props }: TextInputProps) {
+  const inputContainer = (
+    <TextInputContainer>
+      {!!prefix && <Prefix>{prefix}</Prefix>}
+      <Input {...props} />
+    </TextInputContainer>
+  )
+
+  if (!label) return inputContainer
+
   const { children, ...restLabel } = label
   return (
-    <Label {...restLabel}>
+    <LabelContainer {...restLabel}>
       {children}
-      <TextInputContainer>
-        {!!prefix && <Prefix>{prefix}</Prefix>}
-        <Input {...props} />
-      </TextInputContainer>
-    </Label>
+      {inputContainer}
+    </LabelContainer>
   )
 }

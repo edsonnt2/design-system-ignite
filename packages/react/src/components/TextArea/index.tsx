@@ -1,17 +1,20 @@
-import { ComponentProps, ElementType } from 'react'
+import { ComponentProps } from 'react'
 import { InputTextArea, LabelContainer } from './style'
 
 export interface TextAreaProps extends ComponentProps<typeof InputTextArea> {
   label?: ComponentProps<typeof LabelContainer>
-  as?: ElementType
 }
 
-export function TextArea({ label = {}, ...props }: TextAreaProps) {
+export function TextArea({ label, ...props }: TextAreaProps) {
+  const textAreaContainer = <InputTextArea {...props} />
+
+  if (!label) return textAreaContainer
+
   const { children, ...restLabel } = label
   return (
     <LabelContainer {...restLabel}>
       {children}
-      <InputTextArea {...props} />
+      {textAreaContainer}
     </LabelContainer>
   )
 }
