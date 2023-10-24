@@ -1,8 +1,8 @@
 import { ComponentProps } from 'react'
-import { styled } from './styles'
+import { styled } from '../styles'
 
 export const Button = styled('button', {
-  fontFamily: '$default',
+  fontFamily: 'Roboto, serif',
   backgroundColor: '$ignite300',
   borderRadius: '$sm',
   border: 0,
