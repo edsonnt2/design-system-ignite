@@ -1,30 +1,87 @@
-import { ComponentProps } from 'react'
+import { ComponentProps, ElementType } from 'react'
 import { styled } from '../styles'
 
 export const Button = styled('button', {
-  fontFamily: 'Roboto, serif',
-  backgroundColor: '$ignite300',
+  all: 'unset',
+  fontFamily: '$default',
   borderRadius: '$sm',
-  border: 0,
-  fontWeight: '$bold',
-  color: '$white',
+  fontWeight: '$medium',
+  textAlign: 'center',
+  boxSizing: 'border-box',
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  gap: '$2',
+  cursor: 'pointer',
+
+  '&:disabled': {
+    cursor: 'not-allowed',
+  },
+
+  svg: {
+    width: '$4',
+    height: '$4',
+  },
 
   variants: {
-    size: {
-      small: {
-        fontSize: '$sm',
-        padding: '$2 $4',
+    variant: {
+      primary: {
+        backgroundColor: '$ignite500',
+        color: '$white',
+
+        '&:not(:disabled):hover': {
+          backgroundColor: '$ignite300',
+        },
+
+        '&:disabled': {
+          backgroundColor: '$gray200',
+        },
       },
-      big: {
+      secondary: {
+        border: '2px solid $ignite500',
+        color: '$ignite300',
+
+        '&:not(:disabled):hover': {
+          backgroundColor: '$ignite500',
+          color: '$white',
+        },
+
+        '&:disabled': {
+          borderColor: '$gray200',
+          color: '$gray200',
+        },
+      },
+      tertiary: {
+        color: '$gray100',
+
+        '&:not(:disabled):hover': {
+          color: '$white',
+        },
+
+        '&:disabled': {
+          color: '$gray600',
+        },
+      },
+    },
+    size: {
+      sm: {
+        fontSize: '$sm',
+        padding: '0 $4',
+        height: '$8',
+      },
+      md: {
         fontSize: '$md',
-        padding: '$3 $6',
+        padding: '0 $4',
+        height: '$10',
       },
     },
   },
-
   defaultVariants: {
-    size: 'small',
+    variant: 'primary',
+    size: 'md',
   },
 })
 
-export type ButtonProps = ComponentProps<typeof Button>
+export type ButtonProps = ComponentProps<typeof Button> & {
+  as?: ElementType
+}
