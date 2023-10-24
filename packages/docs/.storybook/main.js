@@ -9,9 +9,9 @@ function getAbsolutePath(value) {
 }
 
 /** @type { import('@storybook/react-vite').StorybookConfig } */
-const config = {
+const config = {    
   stories: [
-    "../src/pages/**/*.mdx",
+    "../src/pages/**/*.mdx",    
     "../src/stories/**/*.stories.tsx",
   ],
   previewHead: (head) => `
@@ -31,7 +31,8 @@ const config = {
     options: {},
   },
   docs: {
-    autodocs: "tag",
+    autodocs: true,
+    defaultName: 'Documentation',
   },
 };
 export default config;
