@@ -18,3 +18,5 @@ export function TextArea({ label, ...props }: TextAreaProps) {
     </LabelContainer>
   )
 }
+
+TextArea.displayName = 'TextArea'

@@ -1,19 +1,19 @@
 import type { StoryObj, Meta } from '@storybook/react'
-import { Box, Text, CheckBox, CheckBoxProps } from '@ignite-ui/react'
+import { Box, Text, Checkbox, CheckboxProps } from '@ignite-ui/react'
 
 export default {
-  title: 'Form/CheckBox',
-  component: CheckBox,
+  title: 'Form/Checkbox',
+  component: Checkbox,
   decorators: [(story) => <Box>{story()}</Box>],
-} as Meta<CheckBoxProps>
+} as Meta<CheckboxProps>
 
-export const PrimaryWithDefaultChecked: StoryObj<CheckBoxProps> = {
+export const PrimaryWithDefaultChecked: StoryObj<CheckboxProps> = {
   args: {
     defaultChecked: true,
   },
 }
 
-export const CheckboxWithTextComponentIntoTheLabelChildren: StoryObj<CheckBoxProps> =
+export const CheckboxWithTextComponentIntoTheLabelChildren: StoryObj<CheckboxProps> =
   {
     args: {
       label: {
@@ -22,7 +22,7 @@ export const CheckboxWithTextComponentIntoTheLabelChildren: StoryObj<CheckBoxPro
     },
   }
 
-export const CheckboxWithTextIntoTheLabelChildren: StoryObj<CheckBoxProps> = {
+export const CheckboxWithTextIntoTheLabelChildren: StoryObj<CheckboxProps> = {
   args: {
     label: {
       children: 'This is a simple text without style',
@@ -30,7 +30,7 @@ export const CheckboxWithTextIntoTheLabelChildren: StoryObj<CheckBoxProps> = {
   },
 }
 
-export const Disabled: StoryObj<CheckBoxProps> = {
+export const Disabled: StoryObj<CheckboxProps> = {
   args: {
     disabled: true,
   },
