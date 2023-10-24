@@ -3,6 +3,7 @@ import { styled } from '../../styles'
 export const TextInputContainer = styled('div', {
   backgroundColor: '$gray900',
   padding: '0 $4',
+  borderRadius: '$sm',
   boxSizing: 'border-box',
   border: '2px solid $gray900',
   display: 'flex',

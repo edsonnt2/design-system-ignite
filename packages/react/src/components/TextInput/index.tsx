@@ -1,10 +1,8 @@
 import { ComponentProps } from 'react'
 import { Input, Label, Prefix, TextInputContainer } from './styles'
 
-type LabelProps = ComponentProps<typeof Label>
-
 export interface TextInputProps extends ComponentProps<typeof Input> {
-  label?: LabelProps
+  label?: ComponentProps<typeof Label>
   prefix?: string
 }
 
