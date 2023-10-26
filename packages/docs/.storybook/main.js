@@ -35,5 +35,11 @@ const config = {
     autodocs: true,
     defaultName: 'Documentation',
   },
+  viteFinal: (config, { configType }) => {
+    if (configType === 'PRODUCTION') {
+      config.base = '/design-system-ignite/'
+    }
+    return config
+  }
 };
 export default config;
